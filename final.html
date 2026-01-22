@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Para Sempre</title>
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  overflow:hidden;
+}
+h1{
+  font-size:38px;
+  margin-top:60px;
+}
+button{
+  padding:15px 35px;
+  font-size:22px;
+  border:none;
+  border-radius:40px;
+  background:red;
+  color:white;
+}
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:30px;
+  animation: subir 4s linear forwards;
+}
+@keyframes subir{
+  to{transform:translateY(-100vh);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<h1>
+Pamela Sammy,<br><br>
+eu escolheria você<br>
+em todas as cores,<br>
+em todas as vidas,<br>
+em todos os mundos ❤️
+</h1>
+
+<button onclick="explode()">Clique ❤️</button>
+
+<script>
+function explode(){
+  for(let i=0;i<50;i++){
+    setTimeout(()=>{
+      const h=document.createElement("div");
+      h.className="heart";
+      h.innerText="❤️";
+      h.style.left=Math.random()*100+"vw";
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),4000);
+    },i*100);
+  }
+}
+</script>
+
+</body>
+</html>
