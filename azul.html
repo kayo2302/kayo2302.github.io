@@ -2,36 +2,51 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Azul</title>
+<title>Azul 💙</title>
 <style>
 body{
-  background:#3b82f6;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-  padding:60px;
+background:linear-gradient(135deg,#3fa9f5,#6fd1ff);
+color:white;
+font-family:Arial;
+text-align:center;
 }
-h1{font-size:40px;}
-button{
-  padding:15px 35px;
-  font-size:22px;
-  border:none;
-  border-radius:40px;
-  background:white;
-  color:#2563eb;
-}
+.card{margin:60px auto;max-width:500px;background:rgba(255,255,255,0.2);padding:30px;border-radius:20px;}
+input,button{padding:12px;border-radius:10px;border:none;}
+button{background:#005eff;color:white;margin-top:20px;}
 </style>
 </head>
 <body>
 
-<h1>
-Quando estou com você,<br>
-o mundo desacelera,<br>
-e meu coração<br>
-fica em paz 💙
-</h1>
+<div class="card">
+<h1>💙 Um detalhe que mora no meu coração</h1>
+<p>Qual é a data de nascimento do Kayo?</p>
+<input id="senha">
+<br>
+<button onclick="verificar()">Responder</button>
+<p id="msg" style="display:none;font-size:22px">
+Cada data sua é um motivo meu pra sorrir 💙
+</p>
+</div>
 
-<a href="roxo.html"><button>Continuar ✨</button></a>
-
+<script>
+function verificar(){
+document.getElementById("msg").style.display="block";
+explodir("💙");
+if(document.getElementById("senha").value=="28/01/2005"){
+setTimeout(()=>location.href="roxo.html",2000);
+}}
+function explodir(e){
+for(let i=0;i<25;i++){
+let d=document.createElement("div");
+d.innerText=e;
+d.style.position="fixed";
+d.style.left=Math.random()*100+"vw";
+d.style.bottom="-20px";
+d.style.fontSize=20+Math.random()*30+"px";
+d.style.animation="subir 4s linear";
+document.body.appendChild(d);
+setTimeout(()=>d.remove(),4000);
+}}
+</script>
 </body>
 </html>
