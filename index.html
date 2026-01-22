@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Surpresa para Pamela Sammy ❤️</title>
+
   <style>
     body {
       margin: 0;
@@ -73,7 +74,9 @@
       transform: scale(1.05);
     }
 
-    .hidden { display: none; }
+    .hidden {
+      display: none;
+    }
 
     .heart {
       position: fixed;
@@ -90,29 +93,30 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>❤️ Para Pamela Sammy ❤️</h1>
 
-  <!-- Etapa 1: Senha -->
+  <!-- Etapa 1 -->
   <div class="card" id="step1">
     <h2>Primeira Senha 🔐</h2>
     <p>Dica: Quem te ama mais nesse mundo?</p>
-    <input type="password" id="password1" placeholder="Digite a senha" />
+    <input type="text" placeholder="Digite qualquer coisa ❤️" />
     <br />
     <button onclick="checkPassword()">Entrar</button>
   </div>
 
-  <!-- Etapa 2: Charada -->
+  <!-- Etapa 2 -->
   <div class="card hidden" id="step2">
     <h2>Charada do Amor 💖</h2>
     <p>O que começa com P, termina com A e é o amor da minha vida?</p>
-    <input type="text" id="riddle" placeholder="Resposta" />
+    <input type="text" placeholder="Qualquer resposta 💕" />
     <br />
     <button onclick="checkRiddle()">Responder</button>
   </div>
 
-  <!-- Etapa Final -->
+  <!-- Final -->
   <div class="card hidden" id="final">
     <h2>Para Sempre 💖</h2>
     <p class="love-line">Pamela Sammy…</p>
@@ -130,13 +134,10 @@
       document.getElementById('step2').classList.remove('hidden');
     }
 
-    }
-
     function checkRiddle() {
       document.getElementById('step2').classList.add('hidden');
       document.getElementById('final').classList.remove('hidden');
       startHearts();
-    }
     }
 
     function surprise() {
