@@ -2,36 +2,70 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Para Pamela Sammy ❤️</title>
+<title>Para Pamela 💖</title>
 <style>
 body{
-  background:#ff5fa2;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-  padding:60px;
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff5fa2,#ff9acb);
+color:white;
+text-align:center;
 }
-h1{font-size:42px;}
-button{
-  padding:15px 35px;
-  font-size:22px;
-  border:none;
-  border-radius:40px;
-  background:white;
-  color:#ff3366;
+.card{
+margin:60px auto;
+max-width:500px;
+background:rgba(255,255,255,0.2);
+padding:30px;
+border-radius:20px;
 }
+input,button{
+padding:12px;
+border-radius:10px;
+border:none;
+font-size:16px;
+}
+button{background:#ff3366;color:white;margin-top:20px;}
 </style>
 </head>
 <body>
 
-<h1>
-Pamela Sammy,<br><br>
-esse site é simples…<br>
-mas o que eu sinto por você<br>
-não é ❤️
-</h1>
+<div class="card">
+<h1>💖 Pamela Sammy 💖</h1>
+<p>Qual é o nome do amor da Pamela?</p>
+<input id="senha">
+<br>
+<button onclick="verificar()">Entrar</button>
+<p id="msg" style="display:none;font-size:22px">
+Mesmo errando ou acertando…  
+meu amor por você nunca muda ❤️
+</p>
+</div>
 
-<a href="azul.html"><button>Continuar 💕</button></a>
+<script>
+function verificar(){
+document.getElementById("msg").style.display="block";
+explodir("❤️");
+if(document.getElementById("senha").value.toLowerCase()=="kayo"){
+setTimeout(()=>location.href="azul.html",2000);
+}}
+function explodir(e){
+for(let i=0;i<25;i++){
+let d=document.createElement("div");
+d.innerText=e;
+d.style.position="fixed";
+d.style.left=Math.random()*100+"vw";
+d.style.bottom="-20px";
+d.style.fontSize=20+Math.random()*30+"px";
+d.style.animation="subir 4s linear";
+document.body.appendChild(d);
+setTimeout(()=>d.remove(),4000);
+}}
+</script>
 
+<style>
+@keyframes subir{
+to{transform:translateY(-100vh);opacity:0;}
+}
+</style>
 </body>
 </html>
