@@ -2,106 +2,36 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surpresa para Pamela Sammy ❤️</title>
-
+<title>Para Pamela Sammy ❤️</title>
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff5fa2, #ff9acb);
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
+body{
+  background:#ff5fa2;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding:60px;
 }
-
-.card {
-  background: rgba(255,255,255,0.15);
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 520px;
-  margin: 40px auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-button {
-  margin: 15px;
-  padding: 12px 26px;
-  border: none;
-  border-radius: 30px;
-  background: #ff3366;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-input {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  width: 80%;
-  font-size: 16px;
-}
-
-.hidden { display: none; }
-
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 30px;
-  animation: subir 4s linear forwards;
-}
-
-@keyframes subir {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-100vh); opacity: 0; }
+h1{font-size:42px;}
+button{
+  padding:15px 35px;
+  font-size:22px;
+  border:none;
+  border-radius:40px;
+  background:white;
+  color:#ff3366;
 }
 </style>
 </head>
-
 <body>
 
-<h1>❤️ Para Pamela Sammy ❤️</h1>
+<h1>
+Pamela Sammy,<br><br>
+esse site é simples…<br>
+mas o que eu sinto por você<br>
+não é ❤️
+</h1>
 
-<div class="card" id="step1">
-  <h2>Primeira etapa 🔐</h2>
-  <input type="text">
-  <br>
-  <button onclick="goStep2()">Entrar</button>
-</div>
+<a href="azul.html"><button>Continuar 💕</button></a>
 
-<div class="card hidden" id="step2">
-  <h2>Charada 💖</h2>
-  <input type="text">
-  <br>
-  <button onclick="goFinal()">Responder</button>
-</div>
-
-<div class="card hidden" id="final">
-  <h2>Surpresas 💘</h2>
-
-  <button onclick="surprise1()">Surpresa ❤️</button>
-  <p id="msg1" class="hidden">Você é tudo pra mim ❤️</p>
-
-  <button id="btn2" class="hidden" onclick="surprise2()">Surpresa 😍</button>
-  <p id="msg2" class="hidden">Meu coração é seu 💕</p>
-
-  <button id="trollBtn" class="hidden">Clique aqui 😈</button>
-
-  <button id="btnFinal" class="hidden" onclick="surpriseFinal()">Última Surpresa 💌</button>
-  <p id="msgFinal" class="hidden">Eu te amo para sempre ❤️</p>
-</div>
-
-<script>
-function goStep2() {
-  document.getElementById('step1').classList.add('hidden');
-  document.getElementById('step2').classList.remove('hidden');
-}
-
-function goFinal() {
-  document.getElementById('step2').classList.add('hidden');
-  document.getElementById('final').classList.remove('hidden');
-  chuvaCoracoes();
-}
-
-function surprise1() {
+</body>
+</html>
