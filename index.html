@@ -125,27 +125,18 @@
   </div>
 
   <script>
-    const PASSWORD = "amor"; // você pode mudar
-
     function checkPassword() {
-      const input = document.getElementById('password1').value.toLowerCase();
-      if (input === PASSWORD) {
-        document.getElementById('step1').classList.add('hidden');
-        document.getElementById('step2').classList.remove('hidden');
-      } else {
-        alert('Senha errada 😢');
-      }
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+    }
+
     }
 
     function checkRiddle() {
-      const answer = document.getElementById('riddle').value.toLowerCase();
-      if (answer.includes('pamela')) {
-        document.getElementById('step2').classList.add('hidden');
-        document.getElementById('final').classList.remove('hidden');
-        startHearts();
-      } else {
-        alert('Tenta de novo 💗');
-      }
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('final').classList.remove('hidden');
+      startHearts();
+    }
     }
 
     function surprise() {
