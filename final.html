@@ -1,64 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Para Sempre</title>
+<title>Para Sempre 💖</title>
 <style>
 body{
-  background:black;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-  overflow:hidden;
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
 }
-h1{
-  font-size:38px;
-  margin-top:60px;
-}
-button{
-  padding:15px 35px;
-  font-size:22px;
-  border:none;
-  border-radius:40px;
-  background:red;
-  color:white;
-}
-.heart{
-  position:fixed;
-  bottom:-20px;
-  font-size:30px;
-  animation: subir 4s linear forwards;
-}
-@keyframes subir{
-  to{transform:translateY(-100vh);opacity:0;}
-}
+h1{margin-top:80px;font-size:40px;}
+p{font-size:24px;}
 </style>
 </head>
 <body>
 
-<h1>
-Pamela Sammy,<br><br>
-eu escolheria você<br>
-em todas as cores,<br>
-em todas as vidas,<br>
-em todos os mundos ❤️
-</h1>
-
-<button onclick="explode()">Clique ❤️</button>
+<h1>💖 Pamela Sammy 💖</h1>
+<p>
+Você é minha escolha diária,  
+meu lugar seguro,  
+meu amor eterno.
+</p>
+<p>
+Não importa a cor, a senha ou o caminho…  
+sempre será você.
+</p>
 
 <script>
-function explode(){
-  for(let i=0;i<50;i++){
-    setTimeout(()=>{
-      const h=document.createElement("div");
-      h.className="heart";
-      h.innerText="❤️";
-      h.style.left=Math.random()*100+"vw";
-      document.body.appendChild(h);
-      setTimeout(()=>h.remove(),4000);
-    },i*100);
-  }
-}
+setInterval(()=>{
+let e=["❤️","💙","💜","💛","✨","🥰"];
+let d=document.createElement("div");
+d.innerText=e[Math.floor(Math.random()*e.length)];
+d.style.position="fixed";
+d.style.left=Math.random()*100+"vw";
+d.style.bottom="-20px";
+d.style.fontSize=30+Math.random()*30+"px";
+d.style.animation="subir 5s linear";
+document.body.appendChild(d);
+setTimeout(()=>d.remove(),5000);
+},300);
 </script>
 
 </body>
