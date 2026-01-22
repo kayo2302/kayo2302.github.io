@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Amarelo</title>
+<title>Amarelo 💛</title>
 <style>
 body{
-  background:#facc15;
-  color:#1f2933;
-  font-family:Arial;
-  text-align:center;
-  padding:60px;
+background:linear-gradient(135deg,#ffd93d,#fff176);
+color:#333;
+font-family:Arial;
+text-align:center;
 }
-h1{font-size:40px;}
-button{
-  padding:15px 35px;
-  font-size:22px;
-  border:none;
-  border-radius:40px;
-  background:#1f2933;
-  color:white;
-}
+.card{margin:60px auto;max-width:500px;background:rgba(255,255,255,0.6);padding:30px;border-radius:20px;}
 </style>
 </head>
 <body>
 
-<h1>
-Seu sorriso ilumina<br>
-meus dias mais escuros,<br>
-e faz meu coração<br>
-rir junto com você 💛
-</h1>
+<div class="card">
+<h1>💛 Um detalhe simples</h1>
+<p>Qual é a comida favorita do Kayo?</p>
+<input id="senha">
+<br>
+<button onclick="verificar()">Responder</button>
+<p id="msg" style="display:none;font-size:22px">
+Meu amor por você é simples…  
+mas enorme como o universo 💛
+</p>
+</div>
 
-<a href="final.html"><button>Última ❤️</button></a>
-
+<script>
+function verificar(){
+document.getElementById("msg").style.display="block";
+explodir("💛");
+if(document.getElementById("senha").value.toLowerCase()=="pastel"){
+setTimeout(()=>location.href="final.html",2000);
+}}
+function explodir(e){
+for(let i=0;i<25;i++){
+let d=document.createElement("div");
+d.innerText=e;
+d.style.position="fixed";
+d.style.left=Math.random()*100+"vw";
+d.style.bottom="-20px";
+d.style.fontSize=20+Math.random()*30+"px";
+d.style.animation="subir 4s linear";
+document.body.appendChild(d);
+setTimeout(()=>d.remove(),4000);
+}}
+</script>
 </body>
 </html>
