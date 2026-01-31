@@ -1,71 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Para Pamela 💖</title>
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#ff5fa2,#ff9acb);
-color:white;
-text-align:center;
-}
-.card{
-margin:60px auto;
-max-width:500px;
-background:rgba(255,255,255,0.2);
-padding:30px;
-border-radius:20px;
-}
-input,button{
-padding:12px;
-border-radius:10px;
-border:none;
-font-size:16px;
-}
-button{background:#ff3366;color:white;margin-top:20px;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste do Theo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="card">
+    <div class="badge">🧠 TESTE DE INTELIGÊNCIA</div>
+    <h1>Bem-vindo, Theo.</h1>
+    <p>Se você passar desse site…</p>
+    <p class="warn"><b>eu vou começar a te respeitar.</b> (mentira)</p>
 
-<div class="card">
-<h1>💖 Pamela Sammy 💖</h1>
-<p>Qual é o nome do amor da Pamela?</p>
-<input id="senha">
-<br>
-<button onclick="verificar()">Entrar</button>
-<p id="msg" style="display:none;font-size:22px">
-Mesmo errando ou acertando…  
-meu amor por você nunca muda ❤️
-</p>
-</div>
-
-<script>
-function verificar(){
-document.getElementById("msg").style.display="block";
-explodir("❤️");
-if(document.getElementById("senha").value.toLowerCase()=="kayo"){
-setTimeout(()=>location.href="azul.html",2000);
-}}
-function explodir(e){
-for(let i=0;i<25;i++){
-let d=document.createElement("div");
-d.innerText=e;
-d.style.position="fixed";
-d.style.left=Math.random()*100+"vw";
-d.style.bottom="-20px";
-d.style.fontSize=20+Math.random()*30+"px";
-d.style.animation="subir 4s linear";
-document.body.appendChild(d);
-setTimeout(()=>d.remove(),4000);
-}}
-</script>
-
-<style>
-@keyframes subir{
-to{transform:translateY(-100vh);opacity:0;}
-}
-</style>
+    <a class="btn" href="1.html">Começar</a>
+    <div class="small">*se travar aqui, já sabemos o nível.</div>
+  </div>
 </body>
 </html>
